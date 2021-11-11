@@ -1,0 +1,10 @@
+<div>
+  <h1>New List</h1>
+</div>
+<div>
+  <h2>Make new list here</h2>
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Create", class: 'btn btn-success' %>
+  <% end %>
+</div>

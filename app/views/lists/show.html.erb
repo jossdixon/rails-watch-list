@@ -1,0 +1,18 @@
+<div>
+  <h1><%= @list.name %></h1>
+</div>
+<div>
+  <p><%= link_to "Back to lists", lists_path %></p>
+</div>
+<div>
+  <p>This is your list.</p>
+</div>
+<div>
+    <% @list.bookmarks.each do |bookmark| %>
+    <div>
+      <h2><%= bookmark.movie.title %></h2>
+      <%= image_tag "#{bookmark.movie.poster_url}"%>
+      <%= bookmark.comment %>
+    </div>
+    <% end %>
+</div>
