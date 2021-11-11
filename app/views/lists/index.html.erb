@@ -1,13 +1,15 @@
-<div>
-  <h1>Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://cms.prod.nypr.digital/images/64767/fill-1200x650/);">
+  <div class="container">
+    <h1>It's Movie Night!</h1>
+    <%= link_to "Make A New List", new_list_path, class: 'btn btn-primary mt-2' %>
+  </div>
 </div>
-<div>
-  <%= link_to "Make A New List", new_list_path %>
-</div>
-<div>
-  <ul>
-  <% @lists.each do |list| %>
-    <li> <%= link_to list.name, list_path(list) %> </li>
-  <% end %>
-  </ul>
+<div class="container">
+  <div class="cards mt-3">
+      <% @lists.each do |list| %>
+        <div class="card-category">
+           <%= link_to list.name, list_path(list) %>
+        </div>
+      <% end %>
+  </div>
 </div>
