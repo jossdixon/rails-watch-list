@@ -13,7 +13,7 @@
   position: relative;
   transition: background-image 3s ease-in-out;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 
   &:hover {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://c.tenor.com/p4-otr1xZNoAAAAC/clapping-shia.gif");
