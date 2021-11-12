@@ -9,7 +9,7 @@
 <div class="container">
 <% @list.bookmarks.each do |bookmark| %>
     <div class="card-product">
-        <%= img src=@list.bookmarks
+        <%= img src=@list.bookmarks %>
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %></h2>
         <p><%= bookmark.comment %></p>
