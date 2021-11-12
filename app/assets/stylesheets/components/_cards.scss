@@ -12,6 +12,8 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
   transition: background-image 3s ease-in-out;
+  background-position: center;
+  background-size: contain;
 
   &:hover {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://c.tenor.com/p4-otr1xZNoAAAAC/clapping-shia.gif");
