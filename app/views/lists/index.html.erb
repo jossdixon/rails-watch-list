@@ -7,7 +7,7 @@
 <div class="container">
   <div class="cards mt-3">
       <% @lists.each do |list| %>
-        <div class="card-category" style= "background-image: <%= cl_image_tag @list.photo.key, width: 400, height: 300, crop: :fill if @list.photo.attached? %>">
+        <div class="card-category" style= "background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path('https://i.pinimg.com/originals/2c/86/f8/2c86f889ee87e9d13dc81f1a342b9170.jpg') %>)">
            <%= link_to list.name, list_path(list) %>
         </div>
       <% end %>
