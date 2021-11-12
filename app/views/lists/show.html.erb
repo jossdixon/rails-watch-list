@@ -1,21 +1,23 @@
-<div class="banner">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://cms.prod.nypr.digital/images/64767/fill-1200x650/);">
   <div class="container">
     <h1><%= @list.name %></h1>
-    <p><%= link_to "Back to lists", lists_path %></p>
-    <p><%= link_to "Add a bookmark", new_list_bookmark_path(@list) %></p>
+    <%= link_to "Make A Bookmark", new_list_bookmark_path(@list), class: 'btn btn-primary mt-2' %>
+    <%= link_to "Back to Lists", lists_path, class: 'btn btn-success mt-2' %>
   </div>
 </div>
 
 <div class="container">
-  <div class="cards mt-3">
-    <% @list.bookmarks.each do |bookmark| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
-        <%= bookmark.movie.title %>
-        <%= bookmark.comment %>
+<% @list.bookmarks.each do |bookmark| %>
+    <div class="card-product">
+        <%= image_tag bookmark.movie.poster_url, alt: "Movie picture", width: 200 %>
+      <div class="card-product-infos">
+        <h2><%= bookmark.movie.title %></h2>
+        <p><%= bookmark.comment %></p>
         <%= link_to bookmark_path(bookmark), method: :delete, class: 'card-remove-link', data: { confirm: "Delete #{bookmark.movie.title}?" } do %>
           <i class="fas fa-trash-alt"></i>
         <% end %>
       </div>
     <% end %>
   </div>
+</div>
 </div>

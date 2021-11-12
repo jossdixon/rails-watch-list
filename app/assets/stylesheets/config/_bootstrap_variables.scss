@@ -6,16 +6,16 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 #F2E2BA;
+$body-bg:                 $yellow;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: #F2E2BA;
-$primary:    #4D9078;
-$success:    #2081C3;
-$info:       $yellow;
-$danger:     $red;
-$warning:    $orange;
+$body-color: $purple;
+$primary:    $purple;
+$success:    $pink;
+$info:       $grey;
+$danger:     $blue;
+$warning:    $black;
 
 // Buttons & inputs' radius
 $border-radius:    2px;
