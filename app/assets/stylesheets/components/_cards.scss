@@ -21,8 +21,9 @@
 
   a {
     text-decoration: none;
-    color: $purple;
-    text-shadow: 1px 1px 2px ;
+    color: $pink;
+    text-shadow: 1px 1px 2px $purple;
+    font-weight: medium;
   }
 }
 
