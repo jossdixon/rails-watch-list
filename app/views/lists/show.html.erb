@@ -9,7 +9,7 @@
 <div class="container">
 <% @list.bookmarks.each do |bookmark| %>
     <div class="card-product">
-        <%= cl_image_tag @product.photo.key, width: 400, height: 300, crop: :fill %>
+        <%= cl_image_tag @list.photo.key, width: 400, height: 300, crop: :fill if @list.photo.attached? %>
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %></h2>
         <p><%= bookmark.comment %></p>
